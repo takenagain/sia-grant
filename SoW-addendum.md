@@ -62,8 +62,8 @@
   - **Deliverable:** Demonstration of peer-to-peer atomic swaps within Komodo Wallet.
 
 **Progress:**
-- We have the fundamentals neccesary to begin creating and signing both v1 and v2 transactions. However, we have not yet fully ported the types required to account for SiaFunds or file contract operations within our transactions.
-- We still lack the ability to fully deserialize all V2 "Events". We still require deserialization of contract resolution events. This will be neccesary to provide the full history of users' addresses.
+- We have the fundamentals necessary to begin creating and signing both v1 and v2 transactions. However, we have not yet fully ported the types required to account for SiaFunds or file contract operations within our transactions.
+- We still lack the ability to fully deserialize all V2 "Events". We still require deserialization of contract resolution events. This will be necessary to provide the full history of users' addresses.
 - The feasibility of directly importing existing Sia seeds will be assessed. If Sia seeds are not easily adaptable to the current DeFi Framework codebase, we will provide an import, migration or conversion tool within the DeFi framework API.
-- The "Sia Rust" library will be reorganized to act as a standalone library. Any DeFi Framework logic will be seperated from this crate. 
+- The "Sia Rust" library will be reorganized to act as a standalone library. Any DeFi Framework logic will be separated from this crate. 
 - Numerous unit tests have been implemented in both Go and Rust. More advanced fuzzer based tests will be developed to ensure the true 1:1 port of Sia Go's logic to Rust.
