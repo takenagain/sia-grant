@@ -1,0 +1,1 @@
+This repository includes organizational documentation regarding Komodo Platform's development of Sia support within the Komodo DeFi Framework supported by a [Sia Foundation grant](https://forum.sia.tech/t/standard-grant-proposal-htlc-upgrade-for-sia-for-use-in-atomic-swaps/410).
