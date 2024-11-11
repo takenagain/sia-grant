@@ -104,9 +104,31 @@ The *build/web* folder can be deployed to your preferred static web-hosting serv
 3. Run flutter pub get  
 4. Build/run the application as per the “Running Locally” section.
 
-## Steps for initial iOS setup
+## Steps for initial iOS setup (macOS only)
 
-TODO
+1. Install the latest version of [ruby](https://www.ruby-lang.org/en/documentation/installation/)
+
+   ```bash
+   brew install ruby
+   ```
+
+2. Install the lates version of [cocoapods](https://cocoapods.org/)
+
+   ```bash
+   sudo gem install cocoapods
+   ```
+
+3. Navigate to the *ios* folder in the project root and run the following command
+
+   ```bash
+   pod install
+   ```
+
+4. Build the iOS application (from the project root)
+
+   ```bash
+   flutter build ios --release --no-codesign
+   ```
 
 ## Troubleshooting
 
