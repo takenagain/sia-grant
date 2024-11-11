@@ -9,13 +9,13 @@ Welcome to the Komodo Wallet Flutter setup guide\! This comprehensive guide will
 
    For developers: [Sidekick](https://github.com/fluttertools/sidekick) is an excellent tool for working with multiple Flutter versions on your machine.
 
-2. Install NPM and Node.js (LTS) if you don’t already have them installed. Preferrably LTS versions *20* or *18*, which are known to work. There are known issues with the current LTS release (*22*) Verify installation by running `node --version` and `npm --version`.
+2. Install NPM and Node.js, if you don’t already have them installed. Preferrably LTS versions *v20* or *v18*, which are known to work. There are known issues with the current *v22.** LTS release. Verify installation by running `node --version` and `npm --version`.
 
 3. Clone komodo-wallet repo: [https://github.com/KomodoPlatform/komodo-wallet.git](https://github.com/KomodoPlatform/komodo-wallet.git)
 
 4. Check out the *sia-wallet* branch.  
 
-5. Clean the build folder and fetch dependencies by running the following. Coin icons and other assets are downloaded as part of the initial build, so the first build is expected to fail, but subsequent runs should succeed.
+5. Clean the build folder and fetch dependencies by running the following. Coin icons and other assets are downloaded as part of the initial build, so it is expected to fail, but subsequent builds should succeed.
 
 ```bash
 flutter clean && flutter pub get && flutter build web --release > /dev/null 2>&1 || true
@@ -43,7 +43,7 @@ The *build/web* folder can be deployed to your preferred static web-hosting serv
 
 ### Deploying to Firebase
 
-1. Create a new Firebase project at [https://console.firebase.google.com](https://console.firebase.google.com).
+1. Create a new Firebase project at [https://console.firebase.google.com](https://console.firebase.google.com). Alternatively, do this later via the [Firebase CLI](https://firebase.google.com/docs/cli#management-commands).
 
 2. Install Firebase CLI
 
@@ -57,14 +57,7 @@ The *build/web* folder can be deployed to your preferred static web-hosting serv
    firebase login
    ```
 
-4. Create a Firebase project and add it as an alias (via the [Console](https://docs.appmachine.com/app-details/firebase/create-firebase-project) or the [CLI](https://firebase.google.com/docs/cli#management-commands)).
-   1. (Optional) Create a project via the Firebase CLI if you don’t already have one.
-
-      ```bash
-      firebase projects:create <unique project name>
-      ```
-
-   2. Select the  Firebase project that you want to use, and add it as an alias.
+4. Add the Firebase project created in step 1. as an alias. Select the project you wish to use when prompted.
 
       ```bash
       firebase use --add
@@ -78,7 +71,7 @@ The *build/web* folder can be deployed to your preferred static web-hosting serv
 
    1. What do you want to use as your public directory: `build/web`
    2. Configure as a single-page app (rewrite all urls to /index.html)?: `y`
-   3. Set up automatic builds and deployws with GitHub?: `N`
+   3. Set up automatic builds and deploys with GitHub?: `N`
    4. File `build/web/index.html` already exists. Overwrite? `N`
 
 6. (Optional) Test locally with `firebase serve`:
